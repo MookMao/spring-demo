@@ -1,4 +1,4 @@
-package com.mook.demo.autowiring;
+package com.mook.demo.profile;
 
 import com.mook.demo.Person;
 import com.mook.demo.profile.BeanProfileConfig;
@@ -10,6 +10,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
+
 /**
  * @Author: maojunkai
  * @Date: 2018/6/9 下午7:35
@@ -18,7 +20,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = BeanProfileConfig.class)
 @ActiveProfiles("dev")
 public class BeanProfileTest {
+
     @Autowired
+//    @Resource
     private Person person;
 
 //    @Autowired
