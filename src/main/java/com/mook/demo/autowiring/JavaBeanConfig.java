@@ -14,4 +14,14 @@ public class JavaBeanConfig {
     public ComputerBook computerBook() {
         return new ComputerBook();
     }
+
+    /**
+     * 实例化id 为 computerBook2的类型为ComputerBook的bean
+     * 当使用@Autowired进行注入时，发现有两个Bean类型都为ComputerBook，这时候就根据id来进行过滤
+     * @return
+     */
+    @Bean
+    public ComputerBook computerBook2() {
+        return new ComputerBook();
+    }
 }
