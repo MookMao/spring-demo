@@ -10,5 +10,6 @@
     <!--<context:component-scan base-package="com.mook.demo.aop"></context:component-scan>-->
 
     <!-- 声明spring对@AspectJ的支持 -->
+    <!-- IOC容器自动为与AspectJ切面匹配的Bean创建代理 -->
     <aop:aspectj-autoproxy/>
 </beans>
