@@ -12,4 +12,6 @@
     <!-- 声明spring对@AspectJ的支持 -->
     <!-- IOC容器自动为与AspectJ切面匹配的Bean创建代理 -->
     <aop:aspectj-autoproxy/>
+
+    <bean id="notepad" class="com.mook.demo.scope.Notepad" scope="prototype"></bean>
 </beans>
