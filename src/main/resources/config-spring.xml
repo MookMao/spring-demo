@@ -5,13 +5,13 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="person" class="com.mook.demo.Person"></bean>
-    <context:component-scan base-package="com.mook.demo.autowiring"></context:component-scan>
-    <!--<context:component-scan base-package="com.mook.demo.aop"></context:component-scan>-->
+    <bean id="person" class="com.mook.core.Person"></bean>
+    <context:component-scan base-package="com.mook.core.autowiring"></context:component-scan>
+    <!--<context:component-scan base-package="com.mook.core.aop"></context:component-scan>-->
 
     <!-- 声明spring对@AspectJ的支持 -->
     <!-- IOC容器自动为与AspectJ切面匹配的Bean创建代理 -->
     <aop:aspectj-autoproxy/>
 
-    <bean id="notepad" class="com.mook.demo.scope.Notepad" scope="prototype"></bean>
+    <bean id="notepad" class="com.mook.core.scope.Notepad" scope="prototype"></bean>
 </beans>
