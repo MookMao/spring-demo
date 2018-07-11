@@ -27,6 +27,7 @@ public class BookTest {
 
     @Test
     public void bookTest() {
+        computerBook.printTitle();
         Assert.assertNotNull(book);
         book.printTitle();
     }

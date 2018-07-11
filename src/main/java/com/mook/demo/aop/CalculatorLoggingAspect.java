@@ -26,11 +26,14 @@ public class CalculatorLoggingAspect {
      */
     private static final String PATH = "execution(* CalculateService.add(..))";
 
+    @Pointcut("execution(* CalculateService.add(..))")
+    public void add() {}
+
     /**
      * 前置通知：目标方法调用之前执行的代码
      * @param joinPoint
      */
-    @Before(PATH)
+    @Before("add()")
     public void logBefore(JoinPoint joinPoint) {
         // 可以访问当前连接点的细节
         log.info("The method " + joinPoint.getSignature().getName()
@@ -80,7 +83,7 @@ public class CalculatorLoggingAspect {
      * 主要是调用proceed()方法来执行切入点方法，来作为环绕通知前后方法的分水岭。
      *
      * 环绕通知类似于动态代理的全过程：ProceedingJoinPoint类型的参数可以决定是否执行目标方法。
-     * 而且环绕通知必须有返回值，返回值即为目标方法的返回值
+     * 如果目标方法有返回值，环绕通知必须有返回值
      * @param joinPoint
      * @return
      * @throws Throwable
