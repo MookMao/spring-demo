@@ -13,5 +13,5 @@
     <!-- IOC容器自动为与AspectJ切面匹配的Bean创建代理 -->
     <aop:aspectj-autoproxy/>
 
-    <bean id="notepad" class="com.mook.core.scope.Notepad" scope="prototype"></bean>
+    <!--<bean id="notepad" class="com.mook.core.scope.Notepad" scope="prototype"></bean>-->
 </beans>
