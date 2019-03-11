@@ -5,10 +5,13 @@
 
   <groupId>com.mook.demo</groupId>
   <artifactId>spring-demo</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dubbodemo</module>
+    </modules>
 
-  <name>A Camel Spring Route</name>
+    <name>A Camel Spring Route</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
